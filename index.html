@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Artistry By Amna - Professional Makeup Artistry for Bridal, Events, and Special Occasions">
     <meta name="keywords" content="makeup artist, bridal makeup, event makeup, beauty, artistry">
     <title>Artistry By Amna - Makeup Artist</title>
@@ -174,34 +174,117 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="social-links">
-                    <a href="https://www.instagram.com/artistrybyamna.mua/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-                    <a href="mailto:artistrybyamna.mua@gmail.com" class="social-link" aria-label="Email">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </a>
-                </div>
             </div>
 
-            <div class="form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_pWzvCN7XPjYwljCpQIIjpZJjRYe-EdvYVUnLRuWRqc3Xaw/viewform?embedded=true" width="600" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+             <div class="form-container">
+            <h3>Availability Inquiry</h3>
+            <p style="color: var(--text-light); margin-bottom: 2rem; font-size: 0.95rem;">
+                Please fill out the form below with your event details and I'll get back to you as soon as possible.
+            </p>
+            
+            <form class="contact-form" 
+                  action="https://docs.google.com/forms/d/e/1FAIpQLSe_pWzvCN7XPjYwljCpQIIjpZJjRYe-EdvYVUnLRuWRqc3Xaw/formResponse" 
+                  method="POST"
+                  target="hidden_iframe"
+                  onsubmit="submitted=true;">
+                
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="entry.2024763091" required>
                 </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="entry.164732264" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="event-type">Type of Event *</label>
+                    <select id="event-type" name="entry.100073730" required>
+                        <option value="">Select an option</option>
+                        <option value="Bridal">Bridal</option>
+                        <option value="Engagement">Engagement</option>
+                        <option value="Party">Party/Event</option>
+                        <option value="Prom">Prom/Formal</option>
+                        <option value="Photoshoot">Photoshoot</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="event-date">Date *</label>
+                    <input type="date" id="event-date" name="entry.139907167" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ready-time">Ready Time *</label>
+                        <input type="time" id="ready-time" name="entry.253743615" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="start-time">Start Time of the Event</label>
+                        <input type="time" id="start-time" name="entry.372487454">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="location">Location *</label>
+                        <input type="text" id="location" name="entry.709953713" placeholder="City, State" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="num-clients">Number of Clients *</label>
+                        <input type="text" id="num-clients" name="entry.2067458035" placeholder="e.g., 3" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Additional Details</label>
+                    <textarea id="message" name="entry.972064716" rows="5" placeholder="Tell me more about your vision, number of people, special requests, etc."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">
+                    <span>Send Inquiry</span>
+                </button>
+            </form>
+            
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" 
+                    onload="if(submitted) {document.getElementById('success-message').style.display='block'; document.querySelector('.contact-form').reset(); submitted=false;}"></iframe>
+            
+            <div id="success-message" style="display:none; margin-top: 1.5rem; padding: 1rem; background: #d4f4dd; border-left: 4px solid #4caf50; color: #2e7d32; border-radius: 2px;">
+                <strong>Thank you!</strong> Your inquiry has been submitted. I'll get back to you soon!
             </div>
         </div>
+            <!-- <div class="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_pWzvCN7XPjYwljCpQIIjpZJjRYe-EdvYVUnLRuWRqc3Xaw/viewform?embedded=true" class="form-embed" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            </div> -->
+        </div>
     </section>
+
+<script>
+var submitted = false;
+</script>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2026 Artistry By Amna. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/artistrybyamna.mua/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+            <a href="mailto:artistrybyamna.mua@gmail.com" class="social-link" aria-label="Email">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+        </div>
     </footer>
 
     <!-- Main JavaScript -->

@@ -20,12 +20,21 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-dark);
     background: var(--light);
     overflow-x: hidden;
     line-height: 1.6;
+    width: 100%;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* ===================================
@@ -130,10 +139,12 @@ nav.scrolled {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--soft-pink) 0%, var(--light) 100%);
+    background: #FFF3F5;
     position: relative;
     overflow: hidden;
     padding-top: 80px;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .hero::before {
@@ -190,7 +201,7 @@ nav.scrolled {
 }
 
 .hero p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: var(--text-light);
     margin-bottom: 3rem;
     font-weight: 300;
@@ -250,6 +261,8 @@ nav.scrolled {
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
     align-items: center;
+    width: 100%;
+    overflow: hidden;
 }
 
 .about-image {
@@ -315,7 +328,9 @@ nav.scrolled {
    =================================== */
 .portfolio {
     padding: 8rem 5%;
-    background: var(--soft-pink);
+    background: #FFF3F5;
+    width: 100%;
+    overflow: hidden;
 }
 
 .portfolio-header {
@@ -372,16 +387,19 @@ nav.scrolled {
     overflow: hidden;
     border-radius: 2px;
     background: transparent;
+    width: 100%;
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     background: transparent;
+    width: 100%;
 }
 
 .carousel-slide {
     min-width: 100%;
+    max-width: 100%;
     position: relative;
     opacity: 0;
     transition: opacity 0.6s ease;
@@ -389,6 +407,7 @@ nav.scrolled {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .carousel-slide.active {
@@ -397,6 +416,7 @@ nav.scrolled {
 
 .carousel-slide img {
     width: 100%;
+    max-width: 100%;
     height: 70vh;
     max-height: 700px;
     min-height: 400px;
@@ -533,6 +553,8 @@ nav.scrolled {
     padding: 8rem 5%;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
+    overflow: hidden;
 }
 
 .contact-container {
@@ -596,16 +618,159 @@ nav.scrolled {
     font-size: 1.1rem;
     color: var(--primary);
     font-weight: 300;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .contact-item-content a {
     color: var(--primary);
     text-decoration: none;
     transition: color 0.3s ease;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .contact-item-content a:hover {
     color: var(--secondary);
+}
+
+/* Custom Contact Form */
+.contact-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background: var(--light);
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--secondary);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-light);
+    opacity: 0.7;
+}
+
+.form-group select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%236a6a6a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Submit Button */
+.submit-button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--primary);
+    color: var(--light);
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.submit-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    transition: left 0.4s ease;
+}
+
+.submit-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.submit-button:hover::before {
+    left: 0;
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive Form Styles */
+@media (max-width: 968px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .submit-button {
+        padding: 1rem 2rem;
+        font-size: 0.85rem;
+    }
 }
 
 .social-links {
@@ -636,12 +801,20 @@ nav.scrolled {
     transform: translateY(-5px);
 }
 
+footer .social-links {
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
 /* Form Container */
 .form-container {
     background: white;
     padding: 3rem;
     border-radius: 2px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .form-container h3 {
@@ -651,10 +824,16 @@ nav.scrolled {
     margin-bottom: 1.5rem;
 }
 
+.form-container p {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
 .form-embed {
     width: 100%;
     min-height: 600px;
     border: none;
+    max-width: 100%;
 }
 
 /* ===================================
@@ -740,10 +919,29 @@ footer p {
     .contact-container {
         grid-template-columns: 1fr;
         gap: 4rem;
+        width: 100%;
+    }
+
+    .contact-info {
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .contact-item-content p {
+        overflow-wrap: break-word;
+        word-break: break-word;
     }
 
     .form-container {
         padding: 2rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .form-embed {
+        width: 100%;
+        min-height: 500px;
     }
 
     /* Carousel responsive adjustments */
@@ -790,6 +988,8 @@ footer p {
 
     .hero {
         padding-top: 60px;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .hero h1 {
@@ -801,19 +1001,78 @@ footer p {
         letter-spacing: 1px;
     }
 
+    .hero-content {
+        padding: 1rem;
+        width: 100%;
+    }
+
     .about,
     .portfolio,
     .contact {
         padding: 4rem 5%;
+        width: 100%;
     }
 
     .form-container {
         padding: 1.5rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .form-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .form-container p {
+        font-size: 0.9rem;
+    }
+
+    .form-embed {
+        width: 100%;
+        min-height: 500px;
+        max-width: 100%;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-info p {
+        font-size: 1rem;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .contact-item {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .contact-item-content {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .contact-item-content p,
+    .contact-item-content a {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        justify-content: flex-start;
     }
 
     /* Carousel mobile adjustments */
     .portfolio-categories {
         gap: 3rem;
+        width: 100%;
     }
 
     .category-header h3 {
@@ -824,10 +1083,21 @@ footer p {
         font-size: 0.9rem;
     }
 
+    .carousel-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .carousel-slide {
+        width: 100%;
+    }
+
     .carousel-slide img {
         height: 50vh;
         min-height: 300px;
         object-fit: contain;
+        width: 100%;
+        max-width: 100%;
     }
 
     .carousel-btn {
@@ -872,5 +1142,9 @@ footer p {
 
     .indicator.active {
         width: 28px;
+    }
+
+    .contact-container {
+        width: 100%;
     }
 }
