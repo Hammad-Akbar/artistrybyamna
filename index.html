@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artistry By Amna - Professional Makeup Artistry for Bridal, Events, and Special Occasions">
+    <meta name="keywords" content="makeup artist, bridal makeup, event makeup, beauty, artistry">
+    <title>Artistry By Amna - Makeup Artist</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">ARTISTRY BY AMNA</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Booking</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>
+                Beauty Is
+                <span>An Art Form</span>
+            </h1>
+            <p>Professional Makeup Artistry for Your Most Beautiful Moments</p>
+            <a href="#contact" class="cta-button">
+                <span>Book Your Appointment</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about fade-in-section" id="about">
+        <div class="about-image">
+            <img src="images/about.jpg" alt="Makeup Artistry - Artistry By Amna">
+        </div>
+        <div class="about-content">
+            <div class="section-label">About Me</div>
+            <h2>Creating Beauty Through Artistry</h2>
+            <p>
+                Welcome to Artistry By Amna, where passion meets precision. With years of experience in makeup artistry, I specialize in creating stunning looks that enhance your natural beauty and make you feel confident and radiant.
+            </p>
+            <p>
+                From bridal makeup to special events, editorial shoots to everyday glam, each application is approached as a unique canvas. I believe in using high-quality products and techniques that not only look beautiful but also last throughout your special day.
+            </p>
+            <p>
+                My goal is to make every client feel like the best version of themselves, celebrating their individuality while bringing their beauty vision to life.
+            </p>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio fade-in-section" id="portfolio">
+        <div class="portfolio-header">
+            <div class="section-label">Portfolio</div>
+            <h2>Recent Work</h2>
+        </div>
+        
+        <!-- Portfolio Categories -->
+        <div class="portfolio-categories">
+            <!-- Bridal Beauty Carousel -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3>Bridal Beauty</h3>
+                    <p>Classic Elegance for Your Special Day</p>
+                </div>
+                <div class="carousel-container" data-category="bridal">
+                    <div class="carousel-track">
+                        <!-- Images will be dynamically loaded here -->
+                    </div>
+                    
+                    <!-- Carousel Controls -->
+                    <button class="carousel-btn carousel-btn-prev" aria-label="Previous slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="carousel-btn carousel-btn-next" aria-label="Next slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators">
+                        <!-- Indicators will be dynamically generated -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Occasions Carousel -->
+            <div class="category-section">
+                <div class="category-header">
+                    <h3>Special Occasions</h3>
+                    <p>Glamorous Looks for Every Event</p>
+                </div>
+                <div class="carousel-container" data-category="special">
+                    <div class="carousel-track">
+                        <!-- Images will be dynamically loaded here -->
+                    </div>
+                    
+                    <!-- Carousel Controls -->
+                    <button class="carousel-btn carousel-btn-prev" aria-label="Previous slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button class="carousel-btn carousel-btn-next" aria-label="Next slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators">
+                        <!-- Indicators will be dynamically generated -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact fade-in-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="section-label">Get In Touch</div>
+                <h2>Book Your Appointment</h2>
+                <p style="color: var(--text-light); font-size: 1.05rem; margin-top: 1rem; line-height: 1.8;">
+                    Ready to transform your look? Fill out the booking form or reach out directly through email or Instagram. I'd love to hear about your vision and bring it to life.
+                </p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h3>Email</h3>
+                            <p><a href="mailto:artistrybyamna.mua@gmail.com">artistrybyamna.mua@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </div>
+                        <div class="contact-item-content">
+                            <h3>Instagram</h3>
+                            <p><a href="https://www.instagram.com/artistrybyamna.mua/" target="_blank" rel="noopener noreferrer">@artistrybyamna.mua</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.instagram.com/artistrybyamna.mua/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="mailto:artistrybyamna.mua@gmail.com" class="social-link" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_pWzvCN7XPjYwljCpQIIjpZJjRYe-EdvYVUnLRuWRqc3Xaw/viewform?embedded=true" width="600" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Artistry By Amna. All rights reserved.</p>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
